@@ -21,8 +21,6 @@ CREATE TABLE PLAYER(
 	CONSTRAINT			PLAYER_PK		PRIMARY KEY(PlayerID)
 	);
 
-CREATE SEQUENCE seqOID INCREMENT BY 1 START WITH 1;
-
 CREATE TABLE Made_Basket(
 	ScorerID			Int				NOT NULL,
 	Assist_Result	    Binary(n)		NOT NULL,
@@ -30,8 +28,6 @@ CREATE TABLE Made_Basket(
 	CONSTRAINT			Made_Basket_FK	FOREIGN KEY(PlayerID)
 							REFERENCES PLAYER(PlayerID)
 	);
-
-CREATE SEQUENCE seqOPID INCREMENT BY 1 START WITH 1;
 
 CREATE TABLE ASSIST(
 	ScorerID			Int				NOT NULL,
@@ -50,8 +46,6 @@ CREATE TABLE GGEMPLOYEE(
 	CONSTRAINT			EMPLOYEE_PK		PRIMARY KEY(EmployeeID)
 	);
 
-CREATE SEQUENCE seqEID INCREMENT BY 1 START WITH 1;
-
 CREATE TABLE GG_SERVICE(
 	ServiceID			Int				NOT NULL,
 	ServiceDescription	VarChar(100)	NOT NULL,
@@ -60,15 +54,13 @@ CREATE TABLE GG_SERVICE(
 							PRIMARY KEY(ServiceID)
 	);
 
-CREATE SEQUENCE seqGGSID INCREMENT BY 1 START WITH 1;
-
 CREATE TABLE PROPERTY_SERVICE(
 	PropertyServiceID	Int				NOT NULL,
 	PropertyID			Int				NOT NULL,
 	ServiceID			Int				NOT NULL,
 	ServiceDate			Date			NOT NULL,
 	EmployeeID			Int				NOT NULL,
-	HoursWorked			Number (4,2)	NULL,
+    HoursWorked			Number (4,2)	NULL,
 	CONSTRAINT			PROP_SERVICE_PK 		
 							PRIMARY KEY(PropertyServiceID),
 	CONSTRAINT			PROP_SERVICE_PROP_FK FOREIGN KEY (PropertyID)
@@ -79,6 +71,3 @@ CREATE TABLE PROPERTY_SERVICE(
 							REFERENCES GGEMPLOYEE(EmployeeID)
 	);
 
-CREATE SEQUENCE seqPSID INCREMENT BY 1 START WITH 1;
-
-/********************************************************************************/
