@@ -37,22 +37,49 @@ CREATE TABLE ASSIST(
 							REFERENCES PLAYER(PlayerID)
 	);
 
-CREATE TABLE GGEMPLOYEE(
-	EmployeeID			Int				NOT NULL,
-	LastName			Char(25)		NOT NULL,
-	FirstName			Char(25)		NOT NULL,
-	CellPhone			Char(12)		NOT NULL,
-	ExperienceLevel		Char(15)		NOT NULL,
-	CONSTRAINT			EMPLOYEE_PK		PRIMARY KEY(EmployeeID)
+/*The following tables need to be edited, but wanted to make table code blocks so it's easier to edit later*/
+  
+CREATE TABLE REBOUND(
+	ScorerID			Int				NOT NULL,
+	Assist_Result	    Binary(n)		NOT NULL,
+	Time_Basket_Scored  Int             NOT NULL,
+	CONSTRAINT			Made_Basket_FK	FOREIGN KEY(PlayerID)
+							REFERENCES PLAYER(PlayerID)
 	);
 
-CREATE TABLE GG_SERVICE(
-	ServiceID			Int				NOT NULL,
-	ServiceDescription	VarChar(100)	NOT NULL,
-	CostPerHour			Number (6,2)	NULL,
-	CONSTRAINT			GG_SERVICE_PK 		
-							PRIMARY KEY(ServiceID)
+CREATE TABLE FOUL(
+	ScorerID			Int				NOT NULL,
+	Assist_Result	    Binary(n)		NOT NULL,
+	Time_Basket_Scored  Int             NOT NULL,
+	CONSTRAINT			Made_Basket_FK	FOREIGN KEY(PlayerID)
+							REFERENCES PLAYER(PlayerID)
 	);
+    
+CREATE TABLE TURNOVER(
+	ScorerID			Int				NOT NULL,
+	Assist_Result	    Binary(n)		NOT NULL,
+	Time_Basket_Scored  Int             NOT NULL,
+	CONSTRAINT			Made_Basket_FK	FOREIGN KEY(PlayerID)
+							REFERENCES PLAYER(PlayerID)
+	);
+    
+CREATE TABLE STEAL(
+	ScorerID			Int				NOT NULL,
+	Assist_Result	    Binary(n)		NOT NULL,
+	Time_Basket_Scored  Int             NOT NULL,
+	CONSTRAINT			Made_Basket_FK	FOREIGN KEY(PlayerID)
+							REFERENCES PLAYER(PlayerID)
+	);
+    
+CREATE TABLE BLOCK(
+	ScorerID			Int				NOT NULL,
+	Assist_Result	    Binary(n)		NOT NULL,
+	Time_Basket_Scored  Int             NOT NULL,
+	CONSTRAINT			Made_Basket_FK	FOREIGN KEY(PlayerID)
+							REFERENCES PLAYER(PlayerID)
+	);
+
+/*Will delete next table later, only using it for reference*/
 
 CREATE TABLE PROPERTY_SERVICE(
 	PropertyServiceID	Int				NOT NULL,
