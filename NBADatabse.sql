@@ -1,4 +1,3 @@
-
 DROP TABLE PLAYER CASCADE CONSTRAINTS;
 DROP TABLE MADE_BASKET CASCADE CONSTRAINTS;
 DROP TABLE ASSIST CASCADE CONSTRAINTS;
@@ -7,32 +6,20 @@ DROP TABLE FOUL CASCADE CONSTRAINTS;
 DROP TABLE TURNOVER CASCADE CONSTRAINTS;
 dROP TABLE STEAL CASCADE CONSTRAINTS;
 DROP TABLE BLOCK CASCADE CONSTRAINTS;
-DROP SEQUENCE seqOID;
-DROP SEQUENCE seqOPID;
-DROP SEQUENCE seqEID;
-DROP SEQUENCE seqGGSID;
-DROP SEQUENCE seqPSID;
 
 CREATE TABLE PLAYER(
 	PlayerID			Int			    NOT NULL,
 	PlayerName			Char(50)		NOT NULL,
 	PlayerHeight		Int	            NOT NULL,
 	PlayerWeight		Int		        NOT NULL,
+    AssistID            Int             NULL,
 	CONSTRAINT			PLAYER_PK		PRIMARY KEY(PlayerID)
 	);
 
 CREATE TABLE Made_Basket(
-	ScorerID			Int				NOT NULL,
-	Assist_Result	    Binary(n)		NOT NULL,
+	PlayerID			Int				NOT NULL,
 	Time_Basket_Scored  Int             NOT NULL,
-	CONSTRAINT			Made_Basket_FK	FOREIGN KEY(PlayerID)
-							REFERENCES PLAYER(PlayerID)
-	);
-
-CREATE TABLE ASSIST(
-	ScorerID			Int				NOT NULL,
-	Assist_Result	    Binary(n)		NOT NULL,
-	Time_Basket_Scored  Int             NOT NULL,
+    AssistID            Int             NULL,
 	CONSTRAINT			Made_Basket_FK	FOREIGN KEY(PlayerID)
 							REFERENCES PLAYER(PlayerID)
 	);
@@ -40,42 +27,37 @@ CREATE TABLE ASSIST(
 /*The following tables need to be edited, but wanted to make table code blocks so it's easier to edit later*/
   
 CREATE TABLE REBOUND(
-	ScorerID			Int				NOT NULL,
-	Assist_Result	    Binary(n)		NOT NULL,
-	Time_Basket_Scored  Int             NOT NULL,
-	CONSTRAINT			Made_Basket_FK	FOREIGN KEY(PlayerID)
+	PlayerID			Int				NOT NULL,
+	Time_Rebound        Int             NOT NULL,
+	CONSTRAINT			REBOUND_FK	    FOREIGN KEY(PlayerID)
 							REFERENCES PLAYER(PlayerID)
 	);
 
 CREATE TABLE FOUL(
-	ScorerID			Int				NOT NULL,
-	Assist_Result	    Binary(n)		NOT NULL,
-	Time_Basket_Scored  Int             NOT NULL,
-	CONSTRAINT			Made_Basket_FK	FOREIGN KEY(PlayerID)
+	PlayerID			Int				NOT NULL,
+	Time_Foul           Int             NOT NULL,
+	CONSTRAINT			FOUL_FK	        FOREIGN KEY(PlayerID)
 							REFERENCES PLAYER(PlayerID)
 	);
     
 CREATE TABLE TURNOVER(
-	ScorerID			Int				NOT NULL,
-	Assist_Result	    Binary(n)		NOT NULL,
-	Time_Basket_Scored  Int             NOT NULL,
+	PlayerID			Int				NOT NULL,
+	Time_Turnover       Int             NOT NULL,
 	CONSTRAINT			Made_Basket_FK	FOREIGN KEY(PlayerID)
 							REFERENCES PLAYER(PlayerID)
 	);
     
 CREATE TABLE STEAL(
-	ScorerID			Int				NOT NULL,
-	Assist_Result	    Binary(n)		NOT NULL,
-	Time_Basket_Scored  Int             NOT NULL,
-	CONSTRAINT			Made_Basket_FK	FOREIGN KEY(PlayerID)
+	PlayerID			Int				NOT NULL,
+	Time_Steal          Int             NOT NULL,
+	CONSTRAINT			STEAL_FK	    FOREIGN KEY(PlayerID)
 							REFERENCES PLAYER(PlayerID)
 	);
     
 CREATE TABLE BLOCK(
-	ScorerID			Int				NOT NULL,
-	Assist_Result	    Binary(n)		NOT NULL,
-	Time_Basket_Scored  Int             NOT NULL,
-	CONSTRAINT			Made_Basket_FK	FOREIGN KEY(PlayerID)
+	PlayerID			Int				NOT NULL,
+	Time_Block          Int             NOT NULL,
+	CONSTRAINT			BLOCK_FK	    FOREIGN KEY(PlayerID)
 							REFERENCES PLAYER(PlayerID)
 	);
 
