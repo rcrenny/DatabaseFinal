@@ -1,29 +1,25 @@
-/********************************************************************************/
-/*																				*/
-/*	Kroenke and Auer - Database Concepts (7th Edition) Chapter 03				*/
-/*																				*/
-/*  Garden Glory Database Data													*/
-/*																				*/
-/*	These are the Oracle Express 11GR2 SQL code solutions				*/
-/*																				*/
-/********************************************************************************/
 
-/*****   OWNER DATA   ***********************************************************/
+INSERT INTO PLAYER VALUES
+('00000000', 'Lauri Markkanen', 84, 240, 10, 2, 4, 4, 1, 1, 0);
+INSERT INTO PLAYER VALUES
+('00000001', 'Wendell Carter Jr.', 84, 240, 10, 2, 4, 4, 1, 1, 0);
+INSERT INTO PLAYER VALUES
+('00000002', 'Lauri Markkanen', 84, 240, 10, 2, 4, 4, 1, 1, 0);
+INSERT INTO PLAYER VALUES
+('00000003', 'Lauri Markkanen', 84, 240, 10, 2, 4, 4, 1, 1, 0);
+INSERT INTO PLAYER VALUES
+('00000004', 'Lauri Markkanen', 84, 240, 10, 2, 4, 4, 1, 1, 0);
+INSERT INTO PLAYER VALUES
+('00000005', 'Lauri Markkanen', 84, 240, 10, 2, 4, 4, 1, 1, 0);
+INSERT INTO PLAYER VALUES
+('00000006', 'Lauri Markkanen', 84, 240, 10, 2, 4, 4, 1, 1, 0);
+INSERT INTO PLAYER VALUES
+('00000007', 'Lauri Markkanen', 84, 240, 10, 2, 4, 4, 1, 1, 0);
+INSERT INTO PLAYER VALUES
+('00000008', 'Lauri Markkanen', 84, 240, 10, 2, 4, 4, 1, 1, 0);
+INSERT INTO PLAYER VALUES
+('00000009', 'Lauri Markkanen', 84, 240, 10, 2, 4, 4, 1, 1, 0);
 
-INSERT INTO OWNER VALUES(seqOID.nextVal,
-	'Mary Jones', 'Mary.Jones@somewhere.com', 'Individual');
-INSERT INTO OWNER VALUES(seqOID.nextVal,
-	'DT Enterprises', 'DTE@dte.com', 'Corporation');
-INSERT INTO OWNER VALUES(seqOID.nextVal,
-	'Sam Douglas', 'Sam.Douglas@somewhere.com', 'Individual');
-INSERT INTO OWNER VALUES(seqOID.nextVal,
-	'UNY Enterprises', 'UNYE@unye.com', 'Corporation');
-INSERT INTO OWNER VALUES(seqOID.nextVal,
-	'Doug Samuels', 'Doug.Samuels@somewhere.com', 'Individual');
-
--- SELECT * FROM OWNER;
-
-/*****   PROPERTY   *************************************************************/
 
 INSERT INTO OWNED_PROPERTY VALUES(seqOPID.nextVal,
 	'Eastlake Building', 'Office', '123 Eastlake', 'Seattle', 'WA', '98119', 2);
@@ -44,9 +40,6 @@ INSERT INTO OWNED_PROPERTY VALUES(seqOPID.nextVal,
 INSERT INTO OWNED_PROPERTY VALUES(seqOPID.nextVal,
 	'Oak St Apts', 'Apartments', '5 West Oak', 'Lynwood', 'WA', '98223', 1);
 
--- SELECT * FROM OWNED_PROPERTY;
-
-/*****   EMPLOYEE   *************************************************************/
 
 INSERT INTO GGEMPLOYEE VALUES(seqEID.nextVal,
 	'Smith', 'Sam', '206-254-1234', 'Master');
@@ -59,9 +52,6 @@ INSERT INTO GGEMPLOYEE VALUES(seqEID.nextVal,
 INSERT INTO GGEMPLOYEE VALUES(seqEID.nextVal,
 	'Fontaine', 'Joan', '206-254-3456', 'Senior');
 
--- SELECT * FROM EMPLOYEE;
-
-/*****   GG_SERVICE   **************************************************************/
 
 INSERT INTO GG_SERVICE VALUES(seqGGSID.nextVal, 'Mow Lawn', 25.00);
 INSERT INTO GG_SERVICE VALUES(seqGGSID.nextVal, 'Plant Annuals', 25.00);
@@ -71,10 +61,6 @@ INSERT INTO GG_SERVICE VALUES(seqGGSID.nextVal, 'Prune Small Tree', 60.00);
 INSERT INTO GG_SERVICE VALUES(seqGGSID.nextVal, 'Trim Medium Tree',100.00);
 INSERT INTO GG_SERVICE VALUES(seqGGSID.nextVal, 'Trim Large Tree', 125.00);
 
-
--- SELECT * FROM GG_SERVICE;
-
-/*****   PROPERTY_SERVICE   **************************************************************/
 
 INSERT INTO PROPERTY_SERVICE VALUES(seqPSID.nextVal, 1, 2, TO_DATE('05-MAY-14', 'DD-MON-YY'), 1, 4.50);
 INSERT INTO PROPERTY_SERVICE VALUES(seqPSID.nextVal, 3, 2, TO_DATE('08-MAY-14', 'DD-MON-YY'), 3, 4.50);
@@ -90,7 +76,3 @@ INSERT INTO PROPERTY_SERVICE VALUES(seqPSID.nextVal, 8, 3, TO_DATE('12-JUN-14', 
 INSERT INTO PROPERTY_SERVICE VALUES(seqPSID.nextVal, 4, 5, TO_DATE('15-JUN-14', 'DD-MON-YY'), 1, 5.00);
 INSERT INTO PROPERTY_SERVICE VALUES(seqPSID.nextVal, 7, 3, TO_DATE('19-JUN-14', 'DD-MON-YY'), 2, 4.00);
 
-
-
-
--- SELECT * FROM PROPERTY_SERVICE;
