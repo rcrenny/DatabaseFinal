@@ -8,10 +8,10 @@ dROP TABLE STEAL CASCADE CONSTRAINTS;
 DROP TABLE BLOCK CASCADE CONSTRAINTS;
 
 CREATE TABLE PLAYER(
-	PlayerID			Int			    NOT NULL,
+	PlayerID			Char(8)			NOT NULL,
 	PlayerName			Char(50)		NOT NULL,
 	PlayerHeight		Int	            NOT NULL,
-	PlayerWeight		Int		        NOT NULL,
+	PlayerWeight		Int     		NOT NULL,
     Points              Int             NULL,
     AssistID            Int             NULL,
     Rebound             Int             NULL,
