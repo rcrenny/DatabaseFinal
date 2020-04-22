@@ -22,7 +22,7 @@ CREATE TABLE PLAYER(
 	CONSTRAINT			PLAYER_PK		PRIMARY KEY(PlayerID)
 	);
 
-CREATE TABLE Made_Basket(
+CREATE TABLE MADE_BASKET(
 	PlayerID			Int				NOT NULL,
 	Time_Basket_Scored  Int             NOT NULL,
     AssistID            Int             NULL,
@@ -30,7 +30,7 @@ CREATE TABLE Made_Basket(
 							REFERENCES PLAYER(PlayerID)
 	);
     
-CREATE TABLE Points(
+CREATE TABLE POINTS(
 	PlayerID			Int				NOT NULL,
 	Made_Basket_Value   Int             NOT NULL,
 	CONSTRAINT			Made_Basket_FK	FOREIGN KEY(PlayerID)
