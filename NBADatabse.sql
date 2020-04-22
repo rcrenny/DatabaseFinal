@@ -13,7 +13,7 @@ CREATE TABLE PLAYER(
 	PlayerHeight		Int	            NOT NULL,
 	PlayerWeight		Int     		NOT NULL,
     Points              Int             NULL,
-    AssistID            Int             NULL,
+    Assist              Int             NULL,
     Rebound             Int             NULL,
     Foul                Int             NULL,
     Turnover            Int             NULL,
@@ -21,21 +21,20 @@ CREATE TABLE PLAYER(
     Block               Int             NULL,
 	CONSTRAINT			PLAYER_PK		PRIMARY KEY(PlayerID)
 	);
-
-CREATE TABLE MADE_BASKET(
-	PlayerID			Char(8)			NOT NULL,
-	Time_Basket_Scored  Int             NOT NULL,
-    AssistID            Int             NULL,
-	CONSTRAINT			Made_Basket_FK	FOREIGN KEY(PlayerID)
-							REFERENCES PLAYER(PlayerID)
-	);
-    
+     
 CREATE TABLE POINTS(
 	PlayerID			Char(8)			NOT NULL,
 	Made_Basket_Value   Int             NOT NULL,
 	CONSTRAINT			Made_Basket_FK	FOREIGN KEY(PlayerID)
 							REFERENCES PLAYER(PlayerID)
 	);
+
+CREATE TABLE ASSIST(
+	PlayerID			Char(8)			NOT NULL,
+	Time_Assist         Int             NOT NULL,
+	CONSTRAINT			Assist_FK   	FOREIGN KEY(PlayerID)
+							REFERENCES PLAYER(PlayerID)
+	); 
   
 CREATE TABLE REBOUND(
 	PlayerID			Char(8)			NOT NULL,
