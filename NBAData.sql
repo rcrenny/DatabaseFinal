@@ -19,80 +19,21 @@ INSERT INTO PLAYER VALUES
 ('00000008', 'Coby White', 76, 195, 3, 3, 3, 1, 2, 2, 0);
 INSERT INTO PLAYER VALUES
 ('00000009', 'Denzel Valentine', 76, 220, 6, 2, 3, 2, 2, 1, 0);
-
 INSERT INTO PLAYER VALUES
-('00000010', 'PJ Washington', 79, 230, 6, 2, 3, 2, 2, 1, 0);
+('00000010', 'PJ Washington', 79, 230, 13, 2, 10, 2, 2, 1, 3);
 INSERT INTO PLAYER VALUES
-('00000011', 'Miles Bridges', 78, 225, 6, 2, 3, 2, 2, 1, 0);
+('00000011', 'Miles Bridges', 78, 225, 13, 1, 9, 3, 3, 1, 1);
 INSERT INTO PLAYER VALUES
-('00000012', 'Bismack Biyombo', 80, 255, 6, 2, 3, 2, 2, 1, 0);
+('00000012', 'Bismack Biyombo', 80, 255, 12, 1, 9, 2, 0, 0, 1);
 INSERT INTO PLAYER VALUES
-('00000013', 'Terry Rozier', 73, 190, 6, 2, 3, 2, 2, 1, 0);
+('00000013', 'Terry Rozier', 73, 190, 11, 5, 8, 3, 3, 2, 0);
 INSERT INTO PLAYER VALUES
-('00000014', 'Devonte Graham', 73, 195, 6, 2, 3, 2, 2, 1, 0);
+('00000014', 'Devonte Graham', 73, 195, 16, 7, 5, 3, 7, 3, 0);
 INSERT INTO PLAYER VALUES
-('00000015', 'Michael Kidd-Gilchrist', 78, 230, 6, 2, 3, 2, 2, 1, 0);
+('00000015', 'Michael Kidd-Gilchrist', 78, 230, 2, 1, 7, 1, 2, 0, 0);
 INSERT INTO PLAYER VALUES
-('00000016', 'Cody Martin', 77, 205, 6, 2, 3, 2, 2, 1, 0);
+('00000016', 'Cody Martin', 77, 205, 3, 0, 2, 0, 2, 1, 0);
 INSERT INTO PLAYER VALUES
-('00000017', 'Cody Zeller', 84, 240, 6, 2, 3, 2, 2, 1, 0);
+('00000017', 'Cody Zeller', 84, 240, 11, 2, 10, 1, 0, 0, 0);
 INSERT INTO PLAYER VALUES
-('00000018', 'Malik Monk', 75, 200, 6, 2, 3, 2, 2, 1, 0);
-
-
-
-INSERT INTO OWNED_PROPERTY VALUES(seqOPID.nextVal,
-	'Eastlake Building', 'Office', '123 Eastlake', 'Seattle', 'WA', '98119', 2);
-INSERT INTO OWNED_PROPERTY VALUES(seqOPID.nextVal,
-	'Elm St Apts', 'Apartments', '4 East Elm', 'Lynwood', 'WA', '98223', 1);
-INSERT INTO OWNED_PROPERTY VALUES(seqOPID.nextVal,
-	'Jefferson Hill', 'Office', '42 West 7th St', 'Bellevue', 'WA', '98007', 2);
-INSERT INTO OWNED_PROPERTY VALUES(seqOPID.nextVal,
-	'Lake View Apts', 'Apartments', '1265 32nd Avenue', 'Redmond', 'WA', '98052', 3);
-INSERT INTO OWNED_PROPERTY VALUES(seqOPID.nextVal,
-	'Kodak Heights Apts', 'Apartments', '65 32nd Avenue', 'Redmond', 'WA', '98052', 4);
-INSERT INTO OWNED_PROPERTY VALUES(seqOPID.nextVal,
-	'Jones House', 'Private Residence', '1456 48th St', 'Bellevue', 'WA', '98007', 1);
-INSERT INTO OWNED_PROPERTY VALUES(seqOPID.nextVal,
-	'Douglas House', 'Private Residence', '1567 51st St', 'Bellevue', 'WA', '98007', 3);
-INSERT INTO OWNED_PROPERTY VALUES(seqOPID.nextVal,
-	'Samuels House', 'Private Residence', '567 151st St', 'Redmondr', 'WA', '98052', 5);
-INSERT INTO OWNED_PROPERTY VALUES(seqOPID.nextVal,
-	'Oak St Apts', 'Apartments', '5 West Oak', 'Lynwood', 'WA', '98223', 1);
-
-
-INSERT INTO GGEMPLOYEE VALUES(seqEID.nextVal,
-	'Smith', 'Sam', '206-254-1234', 'Master');
-INSERT INTO GGEMPLOYEE VALUES(seqEID.nextVal,
-	'Evanston', 'John','206-254-2345', 'Senior');
-INSERT INTO GGEMPLOYEE VALUES(seqEID.nextVal,
-	'Murray', 'Dale', '425-545-7654', 'Junior');
-INSERT INTO GGEMPLOYEE VALUES(seqEID.nextVal,
-	'Murphy', 'Jerry', '425-545-8765', 'Master');
-INSERT INTO GGEMPLOYEE VALUES(seqEID.nextVal,
-	'Fontaine', 'Joan', '206-254-3456', 'Senior');
-
-
-INSERT INTO GG_SERVICE VALUES(seqGGSID.nextVal, 'Mow Lawn', 25.00);
-INSERT INTO GG_SERVICE VALUES(seqGGSID.nextVal, 'Plant Annuals', 25.00);
-INSERT INTO GG_SERVICE VALUES(seqGGSID.nextVal, 'Weed Garden', 30.00);
-INSERT INTO GG_SERVICE VALUES(seqGGSID.nextVal, 'Trim Hedge', 45.00);
-INSERT INTO GG_SERVICE VALUES(seqGGSID.nextVal, 'Prune Small Tree', 60.00);
-INSERT INTO GG_SERVICE VALUES(seqGGSID.nextVal, 'Trim Medium Tree',100.00);
-INSERT INTO GG_SERVICE VALUES(seqGGSID.nextVal, 'Trim Large Tree', 125.00);
-
-
-INSERT INTO PROPERTY_SERVICE VALUES(seqPSID.nextVal, 1, 2, TO_DATE('05-MAY-14', 'DD-MON-YY'), 1, 4.50);
-INSERT INTO PROPERTY_SERVICE VALUES(seqPSID.nextVal, 3, 2, TO_DATE('08-MAY-14', 'DD-MON-YY'), 3, 4.50);
-INSERT INTO PROPERTY_SERVICE VALUES(seqPSID.nextVal, 2, 1, TO_DATE('08-MAY-14', 'DD-MON-YY'), 2, 2.75);
-INSERT INTO PROPERTY_SERVICE VALUES(seqPSID.nextVal, 6, 1, TO_DATE('10-MAY-14', 'DD-MON-YY'), 5, 2.50);
-INSERT INTO PROPERTY_SERVICE VALUES(seqPSID.nextVal, 5, 4, TO_DATE('12-MAY-14', 'DD-MON-YY'), 4, 7.50);
-INSERT INTO PROPERTY_SERVICE VALUES(seqPSID.nextVal, 8, 1, TO_DATE('15-MAY-14', 'DD-MON-YY'), 4, 2.75);
-INSERT INTO PROPERTY_SERVICE VALUES(seqPSID.nextVal, 4, 4, TO_DATE('19-MAY-14', 'DD-MON-YY'), 1, 1.00);
-INSERT INTO PROPERTY_SERVICE VALUES(seqPSID.nextVal, 7, 1, TO_DATE('21-MAY-14', 'DD-MON-YY'), 2, 2.50);
-INSERT INTO PROPERTY_SERVICE VALUES(seqPSID.nextVal, 6, 3, TO_DATE('03-JUN-14', 'DD-MON-YY'), 5, 2.50);
-INSERT INTO PROPERTY_SERVICE VALUES(seqPSID.nextVal, 5, 7, TO_DATE('08-JUN-14', 'DD-MON-YY'), 4, 10.50);
-INSERT INTO PROPERTY_SERVICE VALUES(seqPSID.nextVal, 8, 3, TO_DATE('12-JUN-14', 'DD-MON-YY'), 4, 2.75);
-INSERT INTO PROPERTY_SERVICE VALUES(seqPSID.nextVal, 4, 5, TO_DATE('15-JUN-14', 'DD-MON-YY'), 1, 5.00);
-INSERT INTO PROPERTY_SERVICE VALUES(seqPSID.nextVal, 7, 3, TO_DATE('19-JUN-14', 'DD-MON-YY'), 2, 4.00);
-
+('00000018', 'Malik Monk', 75, 200, 2, 2, 0, 1, 1, 1, 0);
