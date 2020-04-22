@@ -1,4 +1,4 @@
-
+/*Player Table Values*/
 INSERT INTO PLAYER VALUES
 ('00000000', 'Lauri Markkanen', 84, 240, 10, 2, 4, 4, 1, 1, 0);
 INSERT INTO PLAYER VALUES
@@ -38,26 +38,41 @@ INSERT INTO PLAYER VALUES
 INSERT INTO PLAYER VALUES
 ('00000018', 'Malik Monk', 75, 200, 2, 2, 0, 1, 1, 1, 0);
 
+/*Made Basket Table Values*/
 INSERT INTO MADE_BASKET VALUES
-('00000000', 'Lauri Markkanen', 84, 240, 10, 2, 4, 4, 1, 1, 0);
+('00000000', 'Lauri Markkanen');
 
+/*Points Table Values*/
 INSERT INTO POINTS VALUES
-('00000000', 'Lauri Markkanen', 84, 240, 10, 2, 4, 4, 1, 1, 0);
+('00000000', 'Lauri Markkanen');
 
+/*Rebound Table Values*/
 INSERT INTO REBOUND VALUES
-('00000000', 'Lauri Markkanen', 84, 240, 10, 2, 4, 4, 1, 1, 0);
+('00000012', 1);
+INSERT INTO REBOUND VALUES
+('00000014', 1);
+INSERT INTO REBOUND VALUES
+('00000012', 1);
+INSERT INTO REBOUND VALUES
+('00000012', 1);
+INSERT INTO REBOUND VALUES
+('00000001', 1);
 
+/*Foul Table Values*/
 INSERT INTO FOUL VALUES
-('00000000', 'Lauri Markkanen', 84, 240, 10, 2, 4, 4, 1, 1, 0);
+('00000000', 'Lauri Markkanen');
 
+/*Turnover Table Values*/
 INSERT INTO TURNOVER VALUES
-('00000000', 'Lauri Markkanen', 84, 240, 10, 2, 4, 4, 1, 1, 0);
+('00000000', 'Lauri Markkanen');
 
+/*Steal Table Values*/
 INSERT INTO STEAL VALUES
-('00000000', 'Lauri Markkanen', 84, 240, 10, 2, 4, 4, 1, 1, 0);
+('00000000', 'Lauri Markkanen');
 
+/*Block Table Values*/
 INSERT INTO BLOCK VALUES
-('00000000', 'Lauri Markkanen', 84, 240, 10, 2, 4, 4, 1, 1, 0);
+('00000000', 'Lauri Markkanen');
 
 
 
