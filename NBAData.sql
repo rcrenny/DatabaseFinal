@@ -39,20 +39,19 @@ INSERT INTO PLAYER VALUES
 ('00000018', 'Malik Monk', 75, 200, 2, 2, 0, 1, 1, 1, 0);
 
 
-/*Made Basket Table Values*/
-INSERT INTO MADE_BASKET VALUES
+/*Points Table Values*/
+INSERT INTO POINTS VALUES
 ('00000000', 'Lauri Markkanen');
 
 
-/*Points Table Values*/
-INSERT INTO POINTS VALUES
+/*Assist Table Values*/
+INSERT INTO ASSIST VALUES
 ('00000000', 'Lauri Markkanen');
 
 
 /*Rebound Table Values*/
 INSERT INTO REBOUND VALUES
 ('00000000', 1);
-
 
 
 /*Foul Table Values*/
