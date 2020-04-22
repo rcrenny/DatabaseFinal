@@ -37,3 +37,27 @@ INSERT INTO PLAYER VALUES
 ('00000017', 'Cody Zeller', 84, 240, 11, 2, 10, 1, 0, 0, 0);
 INSERT INTO PLAYER VALUES
 ('00000018', 'Malik Monk', 75, 200, 2, 2, 0, 1, 1, 1, 0);
+
+INSERT INTO MADE_BASKET VALUES
+('00000000', 'Lauri Markkanen', 84, 240, 10, 2, 4, 4, 1, 1, 0);
+
+INSERT INTO POINTS VALUES
+('00000000', 'Lauri Markkanen', 84, 240, 10, 2, 4, 4, 1, 1, 0);
+
+INSERT INTO REBOUND VALUES
+('00000000', 'Lauri Markkanen', 84, 240, 10, 2, 4, 4, 1, 1, 0);
+
+INSERT INTO FOUL VALUES
+('00000000', 'Lauri Markkanen', 84, 240, 10, 2, 4, 4, 1, 1, 0);
+
+INSERT INTO TURNOVER VALUES
+('00000000', 'Lauri Markkanen', 84, 240, 10, 2, 4, 4, 1, 1, 0);
+
+INSERT INTO STEAL VALUES
+('00000000', 'Lauri Markkanen', 84, 240, 10, 2, 4, 4, 1, 1, 0);
+
+INSERT INTO BLOCK VALUES
+('00000000', 'Lauri Markkanen', 84, 240, 10, 2, 4, 4, 1, 1, 0);
+
+
+
