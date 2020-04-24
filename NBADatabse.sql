@@ -26,7 +26,7 @@ CREATE TABLE POINTS(
 	PlayerID			Char(8)			NOT NULL,
 	Made_Basket_Value   Int             NOT NULL,
     Time_Point_Scored   Int             NOT NULL,
-	CONSTRAINT			Made_Basket_FK	FOREIGN KEY(PlayerID)
+	CONSTRAINT			Points_FK	    FOREIGN KEY(PlayerID)
 							REFERENCES PLAYER(PlayerID)
 	);
 
@@ -54,7 +54,7 @@ CREATE TABLE FOUL(
 CREATE TABLE TURNOVER(
 	PlayerID			Char(8)			NOT NULL,
 	Time_Turnover       Int             NOT NULL,
-	CONSTRAINT			Made_Basket_FK	FOREIGN KEY(PlayerID)
+	CONSTRAINT			Turnover_FK	    FOREIGN KEY(PlayerID)
 							REFERENCES PLAYER(PlayerID)
 	);
     
