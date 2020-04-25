@@ -27,21 +27,3 @@ FROM FOUL
 WHERE Time_Foul > 24 and Time_Foul < 37 
 ORDER BY PlayerID;
 
-/*Turnover*/
-SELECT *
-FROM POINTS
-WHERE Time_Point_Scored <= 24 
-ORDER BY PlayerID;
-
-/*Steal*/
-SELECT *
-FROM POINTS
-WHERE Time_Point_Scored <= 24 
-ORDER BY PlayerID;
-
-/*Block*/
-SELECT *
-FROM POINTS
-WHERE Time_Point_Scored <= 24 
-ORDER BY PlayerID;
-
