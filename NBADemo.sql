@@ -3,17 +3,11 @@ SELECT *
 FROM PLAYER
 ORDER BY PlayerID;
 
-/*Points Example*/
-SELECT PlayerName, PlayerID
-FROM PLAYER
-WHERE PlayerID IN
-(SELECT PlayerID
+/*First Half Player Scoring*/
+SELECT *
 FROM POINTS
-WHERE PlayerID IN
-    (SELECT PlayerID
-    FROM POINTS
-    WHERE Time_Point_Scored = 47))
-ORDER BY PlayerName;
+WHERE Time_Point_Scored <= 24 
+ORDER BY PlayerID;
 
 /*Assist Example*/
 SELECT PlayerName, PlayerID
