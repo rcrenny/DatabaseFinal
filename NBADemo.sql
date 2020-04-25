@@ -9,74 +9,21 @@ FROM POINTS
 WHERE Time_Point_Scored <= 24 
 ORDER BY PlayerID;
 
-/*Assist Example*/
-SELECT PlayerName, PlayerID
-FROM PLAYER
-WHERE PlayerID IN
-(SELECT PlayerID
+/*Devonte Graham Assists*/
+SELECT *
 FROM ASSIST
-WHERE PlayerID IN
-    (SELECT PlayerID
-    FROM ASSIST
-    WHERE Time_Assist = 35))
-ORDER BY PlayerName;
+WHERE PlayerID = 00000014 
+ORDER BY Time_Assist;
 
-/*Rebound Example*/
-SELECT PlayerName, PlayerID
-FROM PLAYER
-WHERE PlayerID IN
-(SELECT PlayerID
+/*PJ Washington First Half Rebounds*/
+SELECT *
 FROM REBOUND
-WHERE PlayerID IN
-    (SELECT PlayerID
-    FROM REBOUND
-    WHERE Time_Rebound = 28))
-ORDER BY PlayerName;
+WHERE PlayerID = 00000010 AND Time_Rebound <= 24 
+ORDER BY Time_Rebound;
 
-/*Foul Example*/
-SELECT PlayerName, PlayerID
-FROM PLAYER
-WHERE PlayerID IN
-(SELECT PlayerID
+/*3rd Quarter Fouls*/
+SELECT *
 FROM FOUL
-WHERE PlayerID IN
-    (SELECT PlayerID
-    FROM FOUL
-    WHERE Time_Foul = 24))
-ORDER BY PlayerName;
+WHERE Time_Foul > 24 and Time_Foul < 37 
+ORDER BY PlayerID;
 
-/*Turnover Subquery*/
-SELECT PlayerName, PlayerID
-FROM PLAYER
-WHERE PlayerID IN
-(SELECT PlayerID
-FROM TURNOVER
-WHERE PlayerID IN
-    (SELECT PlayerID
-    FROM TURNOVER
-    WHERE Time_Turnover = 15))
-ORDER BY PlayerName;
-
-/*Steal Example*/
-SELECT PlayerName, PlayerID
-FROM PLAYER
-WHERE PlayerID IN
-(SELECT PlayerID
-FROM STEAL
-WHERE PlayerID IN
-    (SELECT PlayerID
-    FROM STEAL
-    WHERE Time_Steal = 18))
-ORDER BY PlayerName;
-
-/*Block Example*/
-SELECT PlayerName, PlayerID
-FROM PLAYER
-WHERE PlayerID IN
-(SELECT PlayerID
-FROM BLOCK
-WHERE PlayerID IN
-    (SELECT PlayerID
-    FROM BLOCK
-    WHERE Time_Block = 36))
-ORDER BY PlayerName;
